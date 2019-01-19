@@ -9,8 +9,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class InvilliaApplicationTests {
 
-	@Test
-	public void contextLoads() {
-	}
-
+  @Test
+  public void contextLoads() {
+    InvilliaApplication.main(
+        new String[] {
+          "--spring.main.web-environment=false", "--spring.autoconfigure.exclude=blahblahblah",
+        });
+  }
 }
